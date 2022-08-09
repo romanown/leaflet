@@ -1,0 +1,12 @@
+.main {
+  text-align: center;
+}
+.table {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  max-width: 100vw;
+}
+.list{
+  min-width: 15vw;
+  overflow-x: auto;
+}
