@@ -4,3 +4,8 @@ export type rowDataType = {
   end: string;
 };
 export type listDataType = rowDataType[];
+
+export type cityType = {
+  name: string;
+  point: string;
+};

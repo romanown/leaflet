@@ -1,4 +1,4 @@
-import type { listDataType } from '@/types/lists';
+import type { listDataType, cityType } from 'types/lists';
 
 export const listData: listDataType = [
   {
@@ -10,5 +10,16 @@ export const listData: listDataType = [
     name: 'two line',
     start: 'start pos',
     end: 'end pos',
+  },
+];
+
+export const listCity: cityType[] = [
+  {
+    name: 'one line',
+    point: 'start pos',
+  },
+  {
+    name: 'two line',
+    point: 'start pos',
   },
 ];

@@ -1,15 +1,16 @@
 import type { FC } from 'react';
 
-import List from '../../components/List';
-
 import styles from './MainPage.module.css';
+
+import List from 'components/List';
+import Maps from 'components/Maps';
 
 const MainPage: FC = () => (
   <div className={styles.main}>
     Table
     <div className={styles.table}>
       <List />
-      <div>map</div>
+      <Maps />
     </div>
   </div>
 );
