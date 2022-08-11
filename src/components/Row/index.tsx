@@ -7,12 +7,14 @@ import type { rowDataType } from 'types/lists';
 
 const Row: FC<rowDataType> = ({ name, start, end }: rowDataType) => (
   <div className={styles.main}>
-    <div>{name}</div>
-    <div>
-      <SelectItem item={start} />
-    </div>
-    <div>
-      <SelectItem item={end} />
+    <div className={styles.row}>
+      <div>{name}</div>
+      <div>
+        <SelectItem item={start} />
+      </div>
+      <div>
+        <SelectItem item={end} />
+      </div>
     </div>
   </div>
 );
