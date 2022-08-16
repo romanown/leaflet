@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import './index.css';
 import createSagaMiddleware from 'redux-saga';
+import thunk from 'redux-thunk';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -20,7 +21,7 @@ const store = createStore(
   combineReducers({
     app: reducer,
   }),
-  compose(applyMiddleware(sagaMiddleware)),
+  compose(applyMiddleware(sagaMiddleware), applyMiddleware(thunk)),
 );
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
