@@ -13,9 +13,7 @@ const Row: FC<rowDataType> = ({ name, start, end }: rowDataType) => {
   const dispatch = useDispatch();
   const getData = (pos: string, currPos: any) => {
     setCurrentPos((prev) => ({ ...prev, [pos]: currPos }));
-    // @ts-ignore
-    dispatch(fetchDatas());
-    // @ts-ignore
+    dispatch(fetchDatas('1'));
     dispatch(setCurrent(currentPos));
   };
   return (

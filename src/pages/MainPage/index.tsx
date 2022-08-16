@@ -1,13 +1,21 @@
 import type { FC } from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './MainPage.module.css';
 
 import List from 'components/List';
 import Maps from 'components/Maps';
+import { fetchDatas } from 'store/actions';
+import type { RootState } from 'store/store';
 
 const MainPage: FC = () => {
-  const currentRow = useSelector((state: any) => state.current);
+  const dispatch = useDispatch();
+  const currentRow = useSelector((state: RootState) => state.current);
+  useEffect(() => {
+    dispatch(fetchDatas('1'));
+  }, []);
+
   return (
     <div className={styles.main}>
       Table
